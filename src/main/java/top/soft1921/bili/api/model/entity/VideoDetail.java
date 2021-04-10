@@ -12,39 +12,49 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class User {
+public class VideoDetail {
     /**
     * 主键id
     */
     private Long id;
 
     /**
-    * 用户名
+    * 视频id
     */
-    private String nickname;
+    private Long videoId;
 
     /**
-    * 个性签名
+    * BV号
     */
-    private String signature;
+    private Long bv;
 
     /**
-    * 头像
+    * 描述
     */
-    private String avatar;
+    private String content;
 
     /**
-    * 等级
+    * 弹幕量
     */
-    private Integer level;
+    private Long barrageNumber;
 
     /**
-    * 手机号
+    * 分享量
     */
-    private String phoneNumber;
+    private Long shareNumber;
 
     /**
     * 视频链接
     */
-    private String password;
+    private String videoUrl;
+
+    /**
+    * 视频标签
+    */
+    private String videoTags;
+
+    /**
+    * 评论量
+    */
+    private String commentNumber;
 }

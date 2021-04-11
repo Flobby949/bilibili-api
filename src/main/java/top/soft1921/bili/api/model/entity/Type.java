@@ -6,25 +6,25 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * @author loorzve
+ * @author Flobby
  */
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class Partition {
+public class Type {
     /**
     * 主键id
     */
     private Long id;
 
     /**
-    * 分区类型
+    * 大分区类型
     */
-    private String pName;
+    private Byte type;
 
     /**
-    * 分区视频数量
+    * 小分区主题
     */
-    private Integer pVideoNumber;
+    private String theme;
 }

@@ -1,17 +1,11 @@
 package top.soft1921.bili.api.mapper;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import top.soft1921.bili.api.model.entity.UserDetail;
 
-public interface UserDetailMapper {
-    int deleteByPrimaryKey(Long id);
+/**
+ * @author Flobby
+ */
+public interface UserDetailMapper extends BaseMapper<UserDetail> {
 
-    int insert(UserDetail record);
-
-    int insertSelective(UserDetail record);
-
-    UserDetail selectByPrimaryKey(Long id);
-
-    int updateByPrimaryKeySelective(UserDetail record);
-
-    int updateByPrimaryKey(UserDetail record);
 }

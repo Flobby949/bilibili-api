@@ -1,17 +1,11 @@
 package top.soft1921.bili.api.mapper;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import top.soft1921.bili.api.model.entity.Swiper;
 
-public interface SwiperMapper {
-    int deleteByPrimaryKey(Long id);
+/**
+ * @author Flobby
+ */
+public interface SwiperMapper extends BaseMapper<Swiper> {
 
-    int insert(Swiper record);
-
-    int insertSelective(Swiper record);
-
-    Swiper selectByPrimaryKey(Long id);
-
-    int updateByPrimaryKeySelective(Swiper record);
-
-    int updateByPrimaryKey(Swiper record);
 }

@@ -1,6 +1,8 @@
 package top.soft1921.bili.api.model.entity;
 
 import java.util.Date;
+
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -9,6 +11,7 @@ import lombok.NoArgsConstructor;
 /**
  * @author Flobby
  */
+@TableName(value = "t_hot")
 @Data
 @Builder
 @AllArgsConstructor

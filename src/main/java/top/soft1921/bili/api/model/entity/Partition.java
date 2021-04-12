@@ -1,32 +1,30 @@
 package top.soft1921.bili.api.model.entity;
 
-import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * @author Flobby
+ * @author loorzve
  */
-@TableName(value = "t_swiper")
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class Swiper {
+public class Partition {
     /**
     * 主键id
     */
     private Long id;
 
     /**
-    * 图片地址
+    * 分区类型
     */
-    private String url;
+    private String pName;
 
     /**
-    * 图片描述
+    * 分区视频数量
     */
-    private String description;
+    private Integer pVideoNumber;
 }

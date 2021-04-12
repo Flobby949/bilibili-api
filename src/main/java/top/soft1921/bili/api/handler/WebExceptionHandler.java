@@ -15,7 +15,7 @@ import top.soft1921.bili.api.exception.CustomException;
  * @description :
  */
 
-@ControllerAdvice
+@ControllerAdvice(basePackages = "top.soft1921.bili.api.controller")
 @Slf4j
 public class WebExceptionHandler {
     /**

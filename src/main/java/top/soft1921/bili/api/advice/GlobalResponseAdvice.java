@@ -18,7 +18,7 @@ import top.soft1921.bili.api.common.AjaxResponse;
  */
 
 @Component
-@ControllerAdvice
+@ControllerAdvice(basePackages = "top.soft1921.bili.api.controller")
 public class GlobalResponseAdvice implements
         ResponseBodyAdvice {
     @Override

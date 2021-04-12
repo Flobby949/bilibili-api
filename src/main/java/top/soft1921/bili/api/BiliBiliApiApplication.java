@@ -8,6 +8,8 @@ import springfox.documentation.oas.annotations.EnableOpenApi;
 /**
  * @author Flobby
  */
+
+
 @EnableOpenApi
 @SpringBootApplication
 @MapperScan("top.soft1921.bili.api.mapper")

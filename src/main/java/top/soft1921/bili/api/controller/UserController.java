@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import top.soft1921.bili.api.common.AjaxResponse;
+import top.soft1921.bili.api.mapper.UserMapper;
 import top.soft1921.bili.api.service.UserService;
 
 import javax.annotation.Resource;
@@ -21,9 +22,9 @@ import javax.annotation.Resource;
 @RequestMapping(value = "api/user")
 @Api(tags = "用户模块管理接口")
 public class UserController {
-    @Resource
-    private UserService userService;
 
+    @Resource
+    private UserMapper userMapper;
 
     @GetMapping("hello")
     public String Hello(){
@@ -32,12 +33,13 @@ public class UserController {
     @GetMapping("all")
     @ApiOperation("获取所有用户信息")
     public AjaxResponse getUserList(){
-        return AjaxResponse.success(userService.getAll());
+
+        return AjaxResponse.success(userMapper.getAll());
     }
     @GetMapping("{id}")
     @ApiOperation("根据id查询信息")
     public AjaxResponse getById(@PathVariable("id") int id){
-        return AjaxResponse.success(userService.findById(id));
+        return AjaxResponse.success(userMapper.getUserById(id));
     }
 
 }

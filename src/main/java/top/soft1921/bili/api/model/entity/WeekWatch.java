@@ -42,7 +42,7 @@ public class WeekWatch {
     /**
     * 硬币
     */
-    private Integer conis;
+    private Integer coins;
 
     /**
     * 分享

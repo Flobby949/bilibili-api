@@ -1,6 +1,6 @@
 package top.soft1921.bili.api.service.impl;
 
-import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.springframework.stereotype.Service;
 import top.soft1921.bili.api.mapper.RankMapper;
@@ -21,17 +21,14 @@ public class RankServiceImpl implements RankService {
     @Resource
     private RankMapper rankMapper;
 
-
     @Override
     public List<Rank> selectAll(int pageNum, int pageSize) {
-        LambdaQueryWrapper<Rank> query = new LambdaQueryWrapper<>();
-        query.orderByDesc(Rank::getScore);
-        System.out.println(pageNum + " " + pageSize);
+        QueryWrapper<Rank> queryWrapper = new QueryWrapper<>();
+        queryWrapper.select("*")
+                .orderByDesc("score")
+                .groupBy("pic");
         Page<Rank> page = new Page<>(pageNum, pageSize);
-        System.out.println("总⻚数：" + page.getPages());
-        System.out.println("总记录数：" + page.getTotal());
-        rankMapper.selectPage(page, query);
-        List<Rank> rankList = page.getRecords();
-        return rankList;
+        rankMapper.selectPage(page, queryWrapper);
+        return page.getRecords();
     }
 }

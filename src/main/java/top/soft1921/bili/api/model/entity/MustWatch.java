@@ -1,10 +1,10 @@
 package top.soft1921.bili.api.model.entity;
 
+import java.io.Serializable;
 import java.util.Date;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+
+import com.baomidou.mybatisplus.extension.activerecord.Model;
+import lombok.*;
 
 /**
  * @author Flobby
@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class MustWatch {
+public class MustWatch extends Model<MustWatch> implements Serializable {
     /**
     * 主键id
     */
@@ -78,4 +78,6 @@ public class MustWatch {
     * 成就
     */
     private String achievent;
+
+    private Integer deleted;
 }

@@ -1,5 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="top.soft1921.bili.api.mapper.MustWatchMapper">
+  <resultMap id="BaseResultMap" type="top.soft1921.bili.api.model.entity.MustWatch">
+    <!--@mbg.generated-->
+    <!--@Table t_must_watch-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="view" jdbcType="INTEGER" property="view" />
+    <result column="danmaku" jdbcType="INTEGER" property="danmaku" />
+    <result column="favorite" jdbcType="INTEGER" property="favorite" />
+    <result column="conis" jdbcType="INTEGER" property="conis" />
+    <result column="share" jdbcType="INTEGER" property="share" />
+    <result column="like" jdbcType="INTEGER" property="like" />
+    <result column="duration" jdbcType="INTEGER" property="duration" />
+    <result column="pubdate" jdbcType="TIMESTAMP" property="pubdate" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="pic" jdbcType="VARCHAR" property="pic" />
+    <result column="achievent" jdbcType="VARCHAR" property="achievent" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, user_id, `view`, danmaku, favorite, conis, `share`, `like`, duration, pubdate, 
+    title, pic, achievent
+  </sql>
 
+  <delete id="deleteByPrimaryKey">
+  </delete>
+
+  <update id="updateByPrimaryKey">
+  </update>
+
+  <update id="updateByPrimaryKeySelective">
+  </update>
+
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap">
+  </select>
+
+  <insert id="insertSelective">
+  </insert>
+
+  <insert id="insert">
+  </insert>
 </mapper>

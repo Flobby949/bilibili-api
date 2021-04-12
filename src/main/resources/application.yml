@@ -1,6 +1,6 @@
 # 项目启动端口
 server:
-  port: 8080
+  port: 9090
 
 # 数据库连接
 spring:

@@ -17,6 +17,12 @@ public interface UserService {
     /**
      * 根据id查询用户信息
      */
-    List<User> getUserById(int userId);
+    User getUserById(int userId);
+    /**
+     * 根据id修改用户信息
+     *
+     *
+     */
+    int updateUserById(User user);
 
 }

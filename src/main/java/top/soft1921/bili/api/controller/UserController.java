@@ -2,10 +2,7 @@ package top.soft1921.bili.api.controller;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import top.soft1921.bili.api.model.entity.User;
 import top.soft1921.bili.api.service.UserService;
@@ -36,8 +33,14 @@ public class UserController {
     }
     @GetMapping("{id}")
     @ApiOperation("根据id查询信息")
-    public List<User> getById(@PathVariable("id") int id){
+    public User getById(@PathVariable("id") int id){
         return userService.getUserById(id);
+    }
+
+    @RequestMapping("update")
+    @ApiOperation("根据id修改信息")
+    public int updateById(@RequestBody User user){
+        return userService.updateUserById(user);
     }
 
 }
